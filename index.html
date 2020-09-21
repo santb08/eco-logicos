@@ -51,10 +51,7 @@
                                     class="btn btn-default navbar-btn">Contactanos</a>
                             </p>
                         </li>
-
-
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -335,7 +332,7 @@
                         Valor de ventas en el último año registrado (2017):
                     </h4>
                     <h3 style="color: white">
-                        $147,354.00
+                        $147,354
                     </h3>
                 </div>
                 <div style="width: 80%;" id="plot-paper-dishes"></div>
@@ -346,7 +343,7 @@
                         Valor de ventas en el último año registrado (2017):
                     </h4>
                     <h3 style="color: white">
-                        $61,051,282.00
+                        $61,051,282
                     </h3>
                 </div>
                 <div style="width: 80%;"id="plot-plastic-dishes"></div>
@@ -357,7 +354,7 @@
                         Valor de ventas en el último año registrado (2017):
                     </h4>
                     <h3 style="color: white">
-                        $55,579,522.00
+                        $55,579,522
                     </h3>
                 </div>
                 <div style="width: 80%;" id="plot-paper-glasses"></div>
@@ -368,13 +365,87 @@
                         Valor de ventas en el último año registrado (2017):
                     </h4>
                     <h3 style="color: white">
-                        $198,930,765.00
+                        $198,930,765
                     </h3>
                 </div>
                 <div style="width: 80%;"id="plot-plastic-glasses"></div>
             </div>
         </div>
     </div>
+
+    <div class="section-container" id="contact-section-container">
+        <div class="container contact-form-container">
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-2 col-md-8">
+                    <div class="section-container-spacer">
+                        <h2 class="text-center">Proyecciones (2020-2025)</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <ul id="tabs" class="tabs">
+            <a id="tab-1" class="active" href="#tab-1">Platos</a>
+            <a id="tab-2" href="#tab-2">Vasos</a>
+        </ul>
+    </div>
+    <div class="tabs-content">
+        <div id="tab-1-content">
+            <div style="display: flex; flex-direction: row;">
+                <div style="width: 50%;" id="dishes-total-col"></div>
+                <div style="width: 50%;" id="dishes-total-med"></div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div id="dishes-fast-food"></div>
+                <div id="dishes-restaurants"></div>
+            </div>
+        </div>
+        <div id="tab-2-content">
+            <div style="display: flex; flex-direction: row;">
+                <div style="width: 50%;" id="glasses-total-col"></div>
+                <div style="width: 50%;" id="glasses-total-med"></div>
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div id="glasses-fast-food"></div>
+                <div id="glasses-restaurants"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hice unas tabsxd -->
+    <script>
+        const tabsRef = document.getElementById('tabs'),
+            tab1Ref = document.getElementById('tab-1'), 
+            tab2Ref = document.getElementById('tab-2'),
+            tab1ContentRef = document.getElementById('tab-1-content'),
+            tab2ContentRef = document.getElementById('tab-2-content');
+
+        tab1ContentRef.style.display = "block";
+        tab2ContentRef.style.display = "none";
+
+        tabsRef.onclick = () => {
+            if (tab1Ref.classList.contains('active')) {
+                tab1Ref.classList.remove('active');
+                tab2Ref.classList.add('active');
+                tab2ContentRef.style.display = "block";
+                tab1ContentRef.style.display = "none";
+            } else {
+                tab2Ref.classList.remove('active');
+                tab1Ref.classList.add('active');
+                tab1ContentRef.style.display = "block";
+                tab2ContentRef.style.display = "none";
+            }
+        }
+    </script>
+
+    <div class="section-container">
+        <div class='container-fluid'>
+            <h2 class="text-center" style="background-color: Brown; border-radius: 100px 0 100px 0;">Conclusión</h2>
+            <p class="text-center" style="margin: 0 5em;">De acuerdo con las proyecciones hechas en la formulación del proyecto y en las diversas investigaciones, se define una cuota de mercado no muy grande para nuestra empresa en los primeros años, pero se espera que esta demanda aumente potencialmente cuando las entidades gubernamentales reglamenten el uso de plásticos no biodegradables de un solo uso a base de poliestireno, permitiendo así que se expanda la demanda de nuestros productos biodegradables.</p>
+        </div>
+    </div>
+
     <div class="section-container">
         <div class='container-fluid'>
             <h2 class="text-center" style="background-color: Brown; border-radius: 100px 0 100px 0;">Conclusión</h2>
@@ -425,14 +496,14 @@
     </div>
 
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function (event) {
 
             googleMapInit();
             scrollToAnchor();
             scrollRevelation('reveal');
         });
-    </script>
+    </script> -->
 
     <footer class="footer-container white-text-container">
         <div class="container">
